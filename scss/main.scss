@@ -1,0 +1,74 @@
+$dark: red;
+
+
+
+@import 'reset';
+
+@mixin navbar($mrg, $clr, $bg, $fz, ){
+    margin: $mrg;
+    color: $clr;
+    background-color: $bg;
+    font-size: $fz;
+}
+
+.navbar{
+    @include navbar(40px 40px, rgb(255, 0, 34), rgb(47, 0, 255), 20px);
+    .navbar-list{
+        list-style: none;
+        
+    }
+    &-list__item{
+        text-decoration: none;
+        color: aliceblue;
+    }
+}
+@mixin block($mrg, $clr, $bg, $fz,$wd){
+    margin: $mrg;
+    color: $clr;
+    background-color: $bg;
+    font-size: $fz;
+    width: $wd
+}
+.block{
+    @include block(auto, rgb(0, 234, 255), red, 40px, 400px);
+    .text-block{
+        text-align: center;
+    }
+}
+@mixin block1($clr, $bg, $fz, $wd,$ht){
+    color: $clr;
+    background-color: $bg;
+    font-size: $fz;
+    width: $wd;
+    height: $ht;
+}
+@mixin block2($clr, $bg, $fz, $wd,$ht){
+    color: $clr;
+    background-color: $bg;
+    font-size: $fz;
+    width: $wd;
+    height: $ht;
+}
+@mixin block3($clr, $bg, $fz, $wd,$ht){
+    color: $clr;
+    background-color: $bg;
+    font-size: $fz;
+    width: $wd;
+    height: $ht;
+}
+.section{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.block1{
+    @include block1(white, red, 20px, 500px, 300px)
+    
+}
+.block2{
+    @include block2(white, rgb(0, 255, 8), 20px, 500px, 700px)
+}
+.block3{
+    @include block3(rgb(20, 179, 57), rgb(36, 13, 60), 20px, 300px, 300px)
+}
